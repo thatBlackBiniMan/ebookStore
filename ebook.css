@@ -4,6 +4,7 @@
   --yellow: #edc01f;
   --dark-color: #bf9704;
   --black: #444;
+  --dark: #222;
   --light-color: #666;
   --border: 1px solid var(--black);
   --box-shadow: 0.5rem 1rem rgba(0,0,0,0.1);
@@ -22,6 +23,10 @@
   transition:width none;
 }
 
+body{
+  height: 300rem;
+  background: var(--dark);
+}
 
 html{
   font-size: 62.5%;
@@ -53,13 +58,13 @@ html::-webkit-scrollbar-thumb{
 }
  
 .header .header-1 .logo{
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bolder;
   color: var(--black);
 }
 
 .header .header-1 .logo i{
-  color: var(--dark-color);
+  color: var(--dark);
 }
 
 .header .header-1 .search-form{
@@ -83,3 +88,193 @@ html::-webkit-scrollbar-thumb{
   text-transform: none;
   color: var(--black);
  }
+
+ .header .header-1 .search-form label{
+  font-size: 2.5rem;
+  padding-right: 1.5rem;
+  color: var(--black);
+  cursor: pointer;
+
+ }
+
+ .header .header-1 .search-form label:hover{
+  color: var(--yellow);
+ }
+
+ .header .header-1 .icons div,
+ .header .header-1 .icons a{
+  font-size: 2.5rem;
+  margin-left: 1.5rem;
+  color: var(--black);
+  cursor: pointer;
+ }
+
+ 
+ .header .header-1 .icons div:hover,
+ .header .header-1 .icons a:hover{
+  color: var(--yellow);
+ }
+
+
+ #search-btn{
+  display: none;
+ }
+
+ 
+.header .header-2{
+  background: var(--yellow);
+}
+
+
+.header .header-2 .navbar{
+  text-align: center;
+}
+
+.header .header-2 .navbar a{
+  color: rgb(5, 5, 5);
+  display: inline-block;
+  padding: 1.2rem;
+  font-size: 1.7rem;
+}
+
+.header .header-2 .navbar a:hover{
+  background: var(--dark-color);
+}
+
+.header .header-2.active{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+
+.bottom-navbar{
+ text-align: center; 
+ background: var(--yellow);
+ position: fixed;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ z-index: 1000;
+ display: none;
+}
+
+
+.bottom-navbar a{
+  font-size: 2rem;
+  padding: 2rem;
+  color: #222;
+}
+
+.bottom-navbar a:hover{
+  background: rgb(243, 243, 111);
+}
+
+
+.login-form-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 255, 255, 9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+
+}
+
+.login-form-container form{
+  background: #222;
+  border: var(--border);
+  width: 40rem;
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+  margin: 2rem;
+
+}
+
+
+.login-form-container form h3{
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+
+
+@media (max-width:991px){
+  html{
+    font-size: 55%;   
+  }
+
+  .header .header-1{
+    padding: 2rem;
+    background: var(--yellow);
+  }
+
+  
+ .header .header-1 .icons div:hover,
+ .header .header-1 .icons a:hover{
+  color:  rgb(239, 249, 102);
+ }
+
+}
+
+@media (max-width:768px){
+
+html{
+  scroll-padding-top: 0;
+}
+
+body{
+  padding-bottom: 6rem;
+}
+  .header .header-2{
+    display: none;
+  }
+
+ #search-btn{
+  display: inline-block;
+ }
+
+ .bottom-navbar{
+  display: inline-block;
+ }
+
+  .header .header-1{
+    box-shadow: var(--box-shadow);
+    position: relative;
+    background: var(--yellow);
+  }
+
+  .header .header-1 .icons div:hover,
+  .header .header-1 .icons a:hover{
+   color:  rgb(239, 249, 102);
+  }
+  
+
+  .header .header-1 .search-form{
+    position: absolute;
+    top: 115%;
+    right: 2rem;
+    width: 90%;
+    box-shadow: var(--box-shadow);
+  }
+
+  .header .header-1 .search-form.active{
+    top: 115%;
+  }
+}
+
+
+@media (max-width:450px){
+  html{
+    font-size: 50%;   
+  }
+
+}
