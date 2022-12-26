@@ -4,7 +4,7 @@
   --yellow: #edc01f;
   --dark-color: #bf9704;
   --black: #444;
-  --dark: #222;
+  --dark:  rgb(23, 23, 23);
   --light-color: #666;
   --border: 1px solid var(--black);
   --box-shadow: 0.5rem 1rem rgba(0,0,0,0.1);
@@ -49,8 +49,41 @@ html::-webkit-scrollbar-thumb{
   background: var(--black);
 }
 
+section{
+  padding: 0.5rem 9%;
+}
+
+.btn{
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.9rem 3rem;
+  border-radius:  0.5rem;
+  color: var(--yellow);
+  background: var(--dark);
+  font-size: 1.7rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn2{
+  background: var(--yellow);
+  color: var(--dark);
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.9rem 3rem;
+  border-radius:  0.5rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  font-weight: 500;
+
+}
+.btn,.btn2:hover{
+  background: rgb(246, 236, 123);
+  color: rgb(9, 9, 9);
+}
+
 .header .header-1{
-  background: #fff;
+  background: var(--yellow);
   padding: 1.5rem;
   display: flex;
   align-items: center;
@@ -122,7 +155,8 @@ html::-webkit-scrollbar-thumb{
 
  
 .header .header-2{
-  background: var(--yellow);
+  background: rgb(221, 240, 141);
+
 }
 
 
@@ -177,18 +211,22 @@ html::-webkit-scrollbar-thumb{
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(255, 255, 255, 9);
+  background: var(--dark);
   position: fixed;
   top: 0;
-  left: 0;
+  right: -105%;
   z-index: 1000;
   height: 100%;
   width: 100%;
 
 }
 
+.login-form-container.active{
+  right: 0;
+}
+
 .login-form-container form{
-  background: #222;
+  background: var(--yellow);
   border: var(--border);
   width: 40rem;
   padding: 2rem;
@@ -202,8 +240,134 @@ html::-webkit-scrollbar-thumb{
 .login-form-container form h3{
   font-size: 2rem;
   text-transform: uppercase;
-  color: var(--black);
+  color: var(--dark);
+  text-align: center;
 }
+
+
+.login-form-container form span{
+  display: block;
+  font-size: 1.5rem;
+  padding-top: 1rem;
+}
+
+
+.login-form-container form .box{
+  width: 100%;
+  margin: 7rem 0;
+  font-size: 1.6rem;
+  border: var(--border);
+  border-radius: 0.5rem;
+  padding: 1rem 1.2rem;
+  color: var(--black);
+  text-transform: none;
+}
+
+
+.login-form-container form .checkbox{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+
+}
+
+.login-form-container form .checkbox label{
+  font-size: 1.5rem;
+  color: var(--dark);
+  cursor: pointer ;
+}
+
+
+.login-form-container form .btn{
+  text-align: center;
+  width: 40%;
+  margin: 1.5rem 0;
+}
+
+.login-form-container form p{
+  padding-top: 0.8rem;
+  color: var(--light-color);
+  font-size: 1.5rem;
+
+}
+
+.login-form-container form p a{
+  color: var(--dark);
+  text-decoration: underline;
+}
+
+
+.login-form-container #close-login-btn{
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  font-size: 5rem;
+  color: var(--yellow);
+  cursor: pointer;
+}
+
+.home{
+  /* background: url(image/banner-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center; */
+}
+
+.home .row{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.home .row .content{
+  flex: 1 1 42rem;
+}
+
+.home .row .books-slider{
+  flex: 1 1 42rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+
+.home .row .books-slider a img{
+  height: 25rem;
+}
+
+
+.home .row .book-slider a:hover img{
+  transform: scale(0.9);
+}
+
+
+.home .row .books-slider .stand{
+   width: 100%;
+   margin-top: -2rem;
+}
+
+.home .row .content h3{
+  color: var(--yellow);
+  font-size: 4.5rem;
+
+}
+
+
+
+.home .row .content p{
+  color: rgb(228, 222, 153);
+  font-size: 1.4rem;
+  line-height: 2;
+  padding: 1rem 0;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -216,7 +380,10 @@ html::-webkit-scrollbar-thumb{
     padding: 2rem;
     background: var(--yellow);
   }
-
+ 
+  section{
+    padding: 3rem 2rem;
+  }
   
  .header .header-1 .icons div:hover,
  .header .header-1 .icons a:hover{
@@ -260,14 +427,23 @@ body{
 
   .header .header-1 .search-form{
     position: absolute;
-    top: 115%;
+    top: -115%;
     right: 2rem;
     width: 90%;
     box-shadow: var(--box-shadow);
-  }
+  } 
 
   .header .header-1 .search-form.active{
     top: 115%;
+  }
+
+
+  .home .row .content{
+    text-align: center;
+  }
+
+  .home .row .content h3{
+    font-size: 3.5rem;
   }
 }
 
