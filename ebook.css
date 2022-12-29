@@ -165,14 +165,14 @@ section{
  .header .header-1 .icons a{
   font-size: 2.5rem;
   margin-left: 1.5rem;
-  color: var(--black);
+  color: var(--dark);
   cursor: pointer;
  }
 
  
  .header .header-1 .icons div:hover,
  .header .header-1 .icons a:hover{
-  color: var(--yellow);
+  color: rgb(233, 248, 115);
  }
 
 
@@ -756,7 +756,93 @@ section{
   gap: 1.5rem;
 }
 
+.footer .box-container .box h3{
+ font-size: 2.2rem;
+ color: var(--black);
+ padding: 1rem 0;
+}
 
+
+.footer .box-container .box a{
+  display: block;
+  font-size: 1.4rem;
+  color: var(--dark-color);
+  padding: 1rem 0;
+ }
+
+
+ .footer .box-container .box a i{
+  color: var(--yellow);
+  padding-right: 0.5rem;
+ }
+
+
+
+ .footer .box-container .box a:hover i{
+  padding-right: 2rem;
+ }
+
+ .footer .box-container .box .map{
+  width: 100%;
+ }
+
+ .footer .share {
+  padding: 1rem 0;
+  text-align: center;
+ }
+
+.footer .share a{
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  color: var(--yellow);
+  background: var(--dark);
+  margin: 0 0.3rem;
+  border-radius: 50%;
+}
+
+.footer .share a:hover{
+  background: var(--dark);
+}
+
+
+.footer .credit{
+  border-top: var(--border);
+  margin-top: 2rem;
+  padding: 0 1rem;
+  padding-top: 2.5rem;
+  font-size: 2rem;
+  color: var(--light-color);
+}
+
+.footer .credit span{
+  color: var(--yellow);
+}
+
+
+.loader-container{
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   z-index: 1000;
+   background:rgb(5, 5, 5);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.loader-container.active{
+  display: none;
+}
+
+
+
+.loader-container img{
+  height: 10rem;
+}
 
 
 

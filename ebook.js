@@ -29,9 +29,19 @@ window.onload = () =>{
    } else {
     document.querySelector('.header .header-2').classList.remove('active');
    }
+
+   fadeOut();
 }
 
 
+function loader(){
+  document.querySelector('.loader-container').classList.add('active');
+}
+
+
+function fadeOut(){
+  setTimeout(loader, 3000);
+}
 
 var swiper = new Swiper(".books-slider", {
   loop:true,
